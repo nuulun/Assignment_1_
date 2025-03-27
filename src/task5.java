@@ -6,7 +6,7 @@ public class task5 {
         int n = sc.nextInt();
 
         if (n < 0) {
-            System.out.println("can not");
+            System.out.println("cannot");
         }
         else {
             System.out.println(fib(n));
