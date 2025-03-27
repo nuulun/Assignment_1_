@@ -8,7 +8,12 @@ public class task9 {
 
 
 
-        System.out.println(binomial(n, k));
+        double startTime = System.nanoTime();
+        int res = binomial(n, k);
+        double endTime = System.nanoTime();
+        double duration  = (endTime - startTime ) / 1000000;
+        System.out.println( "result: " + res);
+        System.out.println("Time taken: " + duration + " milliseconds");
 
     }
 

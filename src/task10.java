@@ -8,7 +8,12 @@ public class task10 {
 
 
 
-        System.out.println(gcd(a, b));
+        double startTime = System.nanoTime();
+        int res = gcd(a, b);
+        double endTime = System.nanoTime();
+        double duration  = (endTime - startTime ) / 1000000;
+        System.out.println( "result: " + res);
+        System.out.println("Time taken: " + duration + " milliseconds");
 
     }
 
