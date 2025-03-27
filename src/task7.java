@@ -15,15 +15,17 @@ public class task7 {
         }
 
 
+
     }
 
     public static void  reverse(int n) {
 
         int temp = sc.nextInt();
-        if (n == 1) {
+        if (n == 1) {   // last number stop recursion
             System.out.print(temp + " ");
             return;
         }
+        //first call function itself, then print a temp
         reverse(n-1);
         System.out.print(temp + " ");
 
