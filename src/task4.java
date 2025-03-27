@@ -5,6 +5,12 @@ public class task4 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
+        if (n < 0) {
+            System.out.println("can not ");
+        }
+        else {
+            System.out.println(factorial(n));
+        }
 
 
     }
@@ -14,7 +20,7 @@ public class task4 {
             return 1;
         }
 
-        return factorial(n-1);
+        return factorial(n-1) * n;
 
     }
 }
