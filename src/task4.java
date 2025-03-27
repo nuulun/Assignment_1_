@@ -9,7 +9,12 @@ public class task4 {
             System.out.println("can not ");
         }
         else {
-            System.out.println(factorial(n));
+            double startTime = System.nanoTime();
+            int res = factorial(n);
+            double endTime = System.nanoTime();
+            double duration  = (endTime - startTime ) / 1000000;
+            System.out.println( "result: " + res);
+            System.out.println("Time taken: " + duration + " milliseconds");
         }
 
 
@@ -17,10 +22,10 @@ public class task4 {
 
     public static int factorial(int n) {
         if (n == 1) {
-            return 1;
+            return 1; // base case when n == 1
         }
 
-        return factorial(n-1) * n;
+        return factorial(n-1) * n; // call itself on less 1
 
     }
 }

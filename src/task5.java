@@ -9,12 +9,18 @@ public class task5 {
             System.out.println("cannot");
         }
         else {
-            System.out.println(fib(n));
+            double startTime = System.nanoTime();
+            int res = fib(n);
+            double endTime = System.nanoTime();
+            double duration  = (endTime - startTime ) / 1000000;
+            System.out.println( "result: " + res);
+            System.out.println("Time taken: " + duration + " milliseconds");
         }
 
     }
 
     public static int fib(int n) {
+        // base case when n== 1 and n == 0
         if (n == 1) {
             return 1;
         }
@@ -22,7 +28,7 @@ public class task5 {
             return 0;
         }
 
-        return fib(n-1) + fib((n-2));
+        return fib(n-1) + fib((n-2)); // call itself on less 1 and 2
 
     }
 }
