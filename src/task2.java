@@ -10,9 +10,14 @@ public class task2 {
             arr[i] = sc.nextDouble();
         }
 
+        if (n <= 0) {
+            System.out.println("can not");
+        }
+        else {
+            System.out.println(avg(arr));
 
+        }
 
-        System.out.println(avg(arr));
 
     }
 
