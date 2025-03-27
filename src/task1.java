@@ -10,15 +10,19 @@ public class task1 {
             arr[i] = sc.nextDouble();
         }
 
-
-        System.out.println(min(arr));
+        double startTime = System.nanoTime();
+        double res = min(arr);
+        double endTime = System.nanoTime();
+        double duration  = (endTime - startTime ) / 1000000;
+        System.out.println( "result: " + res);
+        System.out.println("Time taken: " + duration + " milliseconds");
 
     }
 
     public static double min(double[] arr) {
-        double min  = arr[0];
+        double min  = arr[0]; // initial min value takes first element from array
         for (double v : arr) {
-            if (v < min) {
+            if (v < min) {  // compare with other el in array
                 min = v;
             }
         }
