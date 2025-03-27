@@ -7,7 +7,12 @@ public class task7 {
         int n  = sc.nextInt();
 
 
-
+        if (n < 0) {
+            System.out.println("can not");
+        }
+        else {
+            reverse(n);
+        }
 
 
     }

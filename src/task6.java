@@ -3,8 +3,15 @@ import java.util.Scanner;
 public class task6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int a = 2;
-        int n = 10;
+        int a = sc.nextInt();
+        int n = sc.nextInt();
+
+        if (n < 0) {
+            System.out.println("can not");
+        }
+        else {
+            System.out.println(sq(a, n));
+        }
 
 
 
