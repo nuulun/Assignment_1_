@@ -5,12 +5,19 @@ public class task3 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        if (isPrime(n)) {
+
+
+        double startTime = System.nanoTime();
+        boolean res = isPrime(n);
+        double endTime = System.nanoTime();
+        double duration  = (endTime - startTime ) / 1000000;
+        if (res) {
             System.out.println("Prime");
         }
         else {
             System.out.println("Composite");
         }
+        System.out.println("Time taken: " + duration + " milliseconds");
 
 
     }
@@ -19,7 +26,9 @@ public class task3 {
         if (n <= 1) {
             return false;
         }
+        // check divisibility by from 2 to square root n
         for (int i = 2; i <= Math.sqrt(n); i++) {
+
             if (n % i == 0) {
                 return false;
             }
