@@ -21,6 +21,9 @@ public class task7 {
     public static void  reverse(int n) {
 
         int temp = sc.nextInt();
+        if ( n == 0) {
+            return;
+        }
         if (n == 1) {   // last number stop recursion
             System.out.print(temp + " ");
             return;
