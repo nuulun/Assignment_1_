@@ -26,6 +26,9 @@ public class task6 {
         if (n == 1) { // base case when n == 1
             return 2;
         }
+        if (n == 0) {
+            return 1;
+        }
 
 
         return sq(a ,n-1) * a; //multiply and   call itself on less 1
