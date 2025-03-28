@@ -6,16 +6,23 @@ public class task1 {
         int n  = sc.nextInt();
         double[] arr  = new double[n];
 
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextDouble();
+        if (n <= 0) {
+            System.out.println("can not");
+        }
+        else {
+            for (int i = 0; i < n; i++) {
+                arr[i] = sc.nextDouble();
+            }
+
+            double startTime = System.nanoTime();
+            double res = min(arr);
+            double endTime = System.nanoTime();
+            double duration  = (endTime - startTime ) / 1000000;
+            System.out.println( "result: " + res);
+            System.out.println("Time taken: " + duration + " milliseconds");
         }
 
-        double startTime = System.nanoTime();
-        double res = min(arr);
-        double endTime = System.nanoTime();
-        double duration  = (endTime - startTime ) / 1000000;
-        System.out.println( "result: " + res);
-        System.out.println("Time taken: " + duration + " milliseconds");
+
 
     }
 
