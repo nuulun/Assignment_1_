@@ -21,9 +21,10 @@ public class task4 {
     }
 
     public static int factorial(int n) {
-        if (n == 1) {
-            return 1; // base case when n == 1
+        if (n == 1 || n == 0) {
+            return 1; // base case when n == 1 or n == 0
         }
+
 
         return factorial(n-1) * n; // call itself on less 1
 
